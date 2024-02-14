@@ -1,72 +1,71 @@
-<!-- core/templates/core/homepage.html -->
-
-
 {% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
-    <div class="jumbotron text-center">
-        <h1 class="display-4">Welcome to The Khaleel Brothers Site</h1>
-        <p class="lead">Discover our nasheeds, upcoming events, and more.</p>
-    </div>
+<div class="jumbotron text-center">
+   <!-- You can reintroduce the header and lead paragraph here if you wish. -->
+</div>
 
+<!-- Latest Nasheed Section -->
 <section class="my-5">
     <div class="container">
-        <h2 class="text-center mb-4">Latest Release</h2>
+        <h2 class="text-center mb-4">Latest Nasheed</h2>
         <div class="row justify-content-center">
-            <!-- Example artist card with a centered YouTube video preview -->
-            <div class="col-lg-6 mb-4">
+            <!-- Increased the column size for a larger video display -->
+            <div class="col-lg-8 mb-4">
                 <div class="card mx-auto" style="width: auto;">
-                    <!-- YouTube Video Embed -->
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.youtube.com/embed/r6j_mjGv-fw" title="YouTube video" allowfullscreen></iframe>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Artist </h5>
-                        <p class="card-text text-center">Enjoy a performance by Artist .</p>
-                    </div>
+
                 </div>
             </div>
-            <!-- Add more artist cards as needed, with their respective video IDs -->
+        </div>
+    </div>
+</section>
+
+<!-- Revised Upcoming Events Section Inspired by Elementor Layout -->
+<section class="py-5" style="background-color: #f0f0f0;">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Column -->
+            <div class="col-lg-6">
+                <h2 style="font-size: 29px; margin-bottom: 20px;">Embarking on a Spiritual Voyage: Exploring Nasheed and Faith</h2>
+                <p style="margin-bottom: 25px;">The Khaleel Brothers are esteemed nasheed artists whose spiritual melodies resonate across borders, inspiring hearts and souls globally. Their devout voices and spiritually enriching lyrics have garnered a devoted community, establishing them as revered figures within the Islamic nasheed tradition.</p>
+                <div style="text-align: left;">
+                    <a href="#" class="btn btn-outline-info" style="font-size: 18px; padding: 10px 20px;">Learn more</a>
+                </div>
+            </div>
+            <!-- Image Column -->
+            <div class="col-lg-6">
+                <img src="{% static 'images/logo.png' %}" alt="Featured Artist" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<!-- Revised Gallery/Biography Section with Cool Effects -->
+<section class="my-5 biography-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Image Column with Animation -->
+            <div class="col-lg-6 mb-4 animate animate-1">
+                <img src="{% static 'images/logo.png' %}" class="img-fluid rounded" alt="khaleel brothers">
+            </div>
+            <!-- Text Column with Staggered Animations -->
+            <div class="col-lg-6">
+                <h2 class="animate animate-2">Biography</h2>
+                <p class="animate animate-3">Born with a passion for music and a deep love for spirituality, the Khaleel Brothers discovered his calling early in life. Growing up in a rich musical tradition, he honed his vocal talents and developed a unique style that seamlessly blends traditional Islamic themes with contemporary sounds.</p>
+                <p class="animate animate-4">Their music is a testament to his unwavering faith and a powerful tool for connecting with the divine. His songs touch upon themes of love, peace, hope, and the beauty of Islam. Through his artistry, the Khaleel Brothers seeks to inspire listeners to embark on a spiritual journey of self-discovery and faith.</p>
+                <div class="animate animate-4" style="text-align: left;">
+                    <a href="#" class="btn btn-outline-primary">Our story</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 
 
-
-
-    <section class="my-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Upcoming Events</h2>
-            <!-- Add content for upcoming events here -->
-            <div class="row">
-                <!-- Example event card -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="{% static 'images/event1.jpg' %}" class="card-img-top" alt="Event 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Event 1</h5>
-                            <p class="card-text">Details of Event 1.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more event cards as needed -->
-            </div>
-        </div>
-    </section>
-
-    <section class="my-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Gallery</h2>
-            <!-- Add content for the gallery here -->
-            <div class="row">
-                <!-- Example gallery images -->
-                <div class="col-md-4 mb-4">
-                    <img src="{% static 'images/gallery1.jpg' %}" class="img-fluid" alt="Gallery 1">
-                </div>
-                <!-- Add more gallery images as needed -->
-            </div>
-        </div>
-    </section>
 {% endblock %}
