@@ -1,0 +1,72 @@
+<!-- core/templates/core/homepage.html -->
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to The Khaleel Brothers Site</h1>
+        <p class="lead">Discover our nasheeds, upcoming events, and more.</p>
+    </div>
+
+<section class="my-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Latest Release</h2>
+        <div class="row justify-content-center">
+            <!-- Example artist card with a centered YouTube video preview -->
+            <div class="col-lg-6 mb-4">
+                <div class="card mx-auto" style="width: auto;">
+                    <!-- YouTube Video Embed -->
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/r6j_mjGv-fw" title="YouTube video" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Artist </h5>
+                        <p class="card-text text-center">Enjoy a performance by Artist .</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more artist cards as needed, with their respective video IDs -->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <section class="my-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Upcoming Events</h2>
+            <!-- Add content for upcoming events here -->
+            <div class="row">
+                <!-- Example event card -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{% static 'images/event1.jpg' %}" class="card-img-top" alt="Event 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Event 1</h5>
+                            <p class="card-text">Details of Event 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more event cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Gallery</h2>
+            <!-- Add content for the gallery here -->
+            <div class="row">
+                <!-- Example gallery images -->
+                <div class="col-md-4 mb-4">
+                    <img src="{% static 'images/gallery1.jpg' %}" class="img-fluid" alt="Gallery 1">
+                </div>
+                <!-- Add more gallery images as needed -->
+            </div>
+        </div>
+    </section>
+{% endblock %}
