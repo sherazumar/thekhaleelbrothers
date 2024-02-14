@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="gallery-section my-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Gallery</h2>
+        <div class="row">
+            {% for image in images %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <a href="#modal{{ forloop.counter }}" data-bs-toggle="modal" data-bs-target="#modal{{ forloop.counter }}">
+                        <img src="{{ image.image.url }}" class="card-img-top img-fluid" alt="{{ image.title }}">
+                    </a>
+                </div>
+            </div>
+            <!-- Modal Structure -->
+            <div class="modal fade" id="modal{{ forloop.counter }}" tabindex="-1" aria-labelledby="modalLabel{{ forloop.counter }}" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <img src="{{ image.image.url }}" class="img-fluid w-100" alt="{{ image.title }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
