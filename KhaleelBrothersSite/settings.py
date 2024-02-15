@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'events',
     'users',
     'gallery',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -78,6 +79,15 @@ TEMPLATES = [
         },
     },
 ]
+
+# Use Bootstrap's alert classes for message tags
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.INFO: 'alert alert-info',
+    messages.SUCCESS: 'alert alert-success',
+    messages.WARNING: 'alert alert-warning',
+    messages.ERROR: 'alert alert-danger',
+}
 
 WSGI_APPLICATION = 'KhaleelBrothersSite.wsgi.application'
 

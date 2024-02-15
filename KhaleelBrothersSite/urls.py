@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
+from contact.views import contact_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,6 +28,7 @@ urlpatterns = [
     path('events/', include('events.urls')),
     path('users/', include('users.urls')),
     path('gallery/', include('gallery.urls')),
+    path('contact/', contact_view, name='contact'),
     # Add more mappings to include URLs from your apps
 ]
 
