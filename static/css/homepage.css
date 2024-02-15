@@ -1,0 +1,71 @@
+/* Add this in your CSS file or inside a <style> tag in base.html */
+.jumbotron {
+    background-color: #fff; /* Consider a light, clean background */
+    padding: 2rem 1rem; /* Adjust padding for spacing */
+    margin-bottom: 4rem; /* Spacing after jumbotron */
+}
+
+/* Section headings */
+h2.text-center {
+    font-weight: 300; /* Lighter font for a modern look */
+    margin-bottom: 2rem; /* Consistent bottom margin */
+}
+
+/* Buttons */
+.btn-outline-info,
+.btn-outline-primary {
+    border-width: 2px; /* Make the border thicker for prominence */
+}
+
+/* Images */
+img.rounded.shadow {
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+img.rounded.shadow:hover {
+    transform: scale(1.05); /* Slightly enlarge images on hover */
+}
+
+/* Biography section adjustments for a more elegant look */
+.biography-section .h4 {
+    font-size: 2rem; /* Larger font-size for headings */
+}
+
+.biography-section p {
+    font-size: 1.1rem; /* Slightly larger paragraph text */
+    line-height: 1.6; /* Improved line-height for readability */
+}
+
+/* Ensure animations are subtle and
+
+
+
+/* Add this in your CSS file or inside a <style> tag in base.html */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scale and shadow */
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Moves the card up slightly */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); /* Increases shadow to give a 'lifted' effect */
+}
+
+.service-card img {
+    transition: transform 0.3s ease; /* Smooth transition for the image */
+}
+
+.service-card:hover img {
+    transform: scale(1.1); /* Slightly enlarges the image */
+}
+
+/* Styling for the text to make it more professional */
+.service-card h5 {
+    color: #0056b3; /* Theme color for titles */
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555; /* Dark grey color for text */
+}
