@@ -28,7 +28,7 @@ urlpatterns = [
     path('events/', include('events.urls')),
     path('users/', include('users.urls')),
     path('gallery/', include('gallery.urls')),
-    path('contact/', contact_view, name='contact'),
+    path('contact/', include('contact.urls')),
     # Add more mappings to include URLs from your apps
 ]
 
