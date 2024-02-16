@@ -1,0 +1,35 @@
+/* static/css/gallery.css */
+.gallery-section .card {
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.gallery-section .card:hover {
+    transform: scale(1.03);
+}
+
+.gallery-section .card-img-top {
+    height: 250px; /* Adjust height as necessary */
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.modal-body {
+    padding: 2rem;
+    background: #000;
+}
+
+.modal-body .btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1050;
+    background-color: #fff; /* Ensure the close button is visible on dark backgrounds */
+    border-radius: 0.3rem;
+    padding: 0.3rem 0.6rem;
+}
+
+.modal-body img {
+    border-radius: 0.25rem;
+}

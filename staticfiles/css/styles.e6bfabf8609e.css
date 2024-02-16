@@ -1,0 +1,40 @@
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 20px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+/* Apply animation to elements with 'animate' class */
+.animate {
+    opacity: 0; /* Start invisible */
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; /* Keep the state after animation ends */
+}
+
+/* Staggered Animation Delays */
+.animate-1 { animation-delay: 0.5s; }
+.animate-2 { animation-delay: 1s; }
+.animate-3 { animation-delay: 1.5s; }
+.animate-4 { animation-delay: 2s; }
+
+/* Additional Styling */
+.biography-section {
+    background-color: #f0f0f0; /* Light background for the section */
+    padding: 40px 0; /* Padding for spacing */
+}
+.biography-section h2, .biography-section p {
+    margin: 0 0 20px; /* Spacing between elements */
+}
+.biography-section .btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners for buttons */
+}
