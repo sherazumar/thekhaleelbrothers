@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="text-center mb-4"><strong>Charity Work</strong></h2>
+<div class="charity-work-container">
+    {% for work in charity_works %}
+    <div class="charity-work-item">
+        <h2>{{ work.title }}</h2>
+        <img src="{{ work.image.url }}" alt="{{ work.title }}" style="max-width: 100%; height: auto;">
+        <p>{{ work.description }}</p>
+        <p><strong>Date:</strong> {{ work.date }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

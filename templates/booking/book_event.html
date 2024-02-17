@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container py-5" data-aos="fade-up" data-aos-duration="1000">
+    <div class="row justify-content-center">
+        <!-- Bronze Plan Card -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card shadow h-100">
+                <div class="card-header" style="background-color: #cd7f32; color: white;">
+                    <h3 class="card-title text-center">Bronze Plan</h3>
+                </div>
+                <div class="card-body text-center">
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-music-note-list me-2"></i> Huge Nasheed Library <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-speaker me-2"></i> Full DJ Setup <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-chat-text me-2"></i> English & Urdu Announcements <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-clock me-2"></i> 4-5 Hours Maximum <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-x-lg me-2"></i> No Live Performance <i
+                                class="bi bi-x-lg text-danger ms-2"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-footer text-center">
+                    <a href="#" class="btn select-plan" style="background-color: #cd7f32; color: white;"
+                       data-plan="Bronze">Select Plan</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Silver Plan Card -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card shadow h-100">
+                <div class="card-header text-center" style="background-color: #C0C0C0; color: white;">
+                    <h3 class="card-title">Silver Plan</h3>
+                </div>
+                <div class="card-body text-center">
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-music-note-list me-2"></i> Huge Nasheed Library <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-speaker me-2"></i> Full DJ Setup <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-chat-text me-2"></i> English & Urdu Announcements <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-mic me-2"></i> Full Event Hosting <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-clock me-2"></i> 4-5 Hours Maximum <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-music-note-beamed me-2"></i> Live Performance by Khaleel Brothers <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn select-plan" style="background-color: #C0C0C0; color: white;"
+                       data-plan="Silver">Select Plan</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Gold Plan Card -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card shadow h-100">
+                <div class="card-header text-center" style="background-color: #D4AF37; color: white;">
+                    <h3 class="card-title">Gold Plan</h3>
+                </div>
+                <div class="card-body text-center">
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-music-note-list me-2"></i> Huge Nasheed Library <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-speaker me-2"></i> Full DJ Setup <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-chat-text me-2"></i> English & Urdu Announcements <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-broadcast me-2"></i> 360 Booth <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-mic me-2"></i> Full Event Hosting <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-clock me-2"></i> 5 Hours Maximum <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center align-items-center">
+                            <i class="bi bi-music-note-beamed me-2"></i> Live Performance by Khaleel Brothers <i
+                                class="bi bi-check-lg text-success ms-2"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn select-plan" style="background-color: #D4AF37; color: white;"
+                       data-plan="Gold">Select Plan</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- Booking Form -->
+    <div class="row justify-content-center mt-5" id="booking-form">
+
+        <div class="col-lg-8">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4 booking-form-title">Book Your Service Now</h2>
+                    <form method="POST" action="{% url 'book_event' %}">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="customerName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="customerName" name="customer_name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="customerEmail" name="customer_email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerPhone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="customerPhone" name="customer_phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cityCountry" class="form-label">City/Country</label>
+                            <input type="text" class="form-control" id="cityCountry" name="city_country" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="occasion" class="form-label">Occasion</label>
+                            <input type="text" class="form-control" id="occasion" name="occasion" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="serviceDate" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="serviceDate" name="service_date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="serviceTime" class="form-label">Time</label>
+                            <input type="time" class="form-control" id="serviceTime" name="service_time" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="serviceType" class="form-label">Service Type</label>
+                            <select class="form-select" id="serviceType" name="service" required>
+                                <option selected disabled>Choose...</option>
+                                <option value="Bronze">Bronze Plan</option>
+                                <option value="Silver">Silver Plan</option>
+                                <option value="Gold">Gold Plan</option>
+                                <option value="Help">Help me choose</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.select-plan').forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent the default anchor behavior
+
+                    var plan = this.getAttribute('data-plan'); // Get the plan from the data attribute
+                    document.getElementById('serviceType').value = plan; // Set the dropdown value
+
+                    // Change the color of the booking form title based on the selected plan
+                    var title = document.querySelector('.booking-form-title');
+                    if (plan === 'Bronze') {
+                        title.style.color = '#cd7f32';
+                    } else if (plan === 'Silver') {
+                        title.style.color = '#C0C0C0';
+                    } else if (plan === 'Gold') {
+                        title.style.color = '#D4AF37';
+                    }
+
+                    // Scroll to the booking form
+                    document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+
+
+    {% endblock %}

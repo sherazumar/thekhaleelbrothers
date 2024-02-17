@@ -1,8 +1,8 @@
 # booking/urls.py
 
 from django.urls import path
-from . import views
+from .views import book_event
 
 urlpatterns = [
-    path('book-event/', views.book_event, name='book_event'),
+    path('', book_event, name='book_event'),
 ]

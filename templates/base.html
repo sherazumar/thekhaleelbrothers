@@ -49,7 +49,7 @@
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="#">
-                            <i class="bi bi-calendar-event-fill"></i> Events
+                            <i class="bi bi-calendar-event-fill"></i> Services
                         </a>
                     </li>
                     <li class="nav-item mx-2">
@@ -63,7 +63,7 @@
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{% url 'charity' %}">
                             <i class="bi bi-heart-fill"></i> Charity
                         </a>
                     </li>
@@ -76,7 +76,7 @@
             </div>
             <!-- Book Now on the right with proper sizing to avoid wrapping -->
             <form class="d-flex me-lg-5">
-                <a class="btn btn-outline-danger" href="#" style="white-space: nowrap;">
+                <a class="btn btn-outline-warning" href="{% url 'book_event' %}" style="white-space: nowrap;">
                     <i class="bi bi-calendar-plus"></i> Book Now
                 </a>
             </form>

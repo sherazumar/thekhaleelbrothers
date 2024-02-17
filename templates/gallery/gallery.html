@@ -2,59 +2,54 @@
 {% load static %}
 
 {% block content %}
-<!-- Gallery Section -->
-<section class="gallery-section py-5">
+<!-- Slideshow Section -->
+<div id="mainSlideshow" class="carousel slide" data-bs-ride="carousel">
+    <h2 class="text-center mb-4"><strong>Gallery</strong></h2>
+
+    <div class="carousel-inner">
+        {% for image in images %}
+        <div class="carousel-item{% if forloop.first %} active{% endif %}">
+            <img src="{{ image.image.url }}" class="d-block w-100 img-thumbnail" alt="{{ image.title }}" style="border-radius: 15px;">
+        </div>
+        {% endfor %}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainSlideshow" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainSlideshow" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- Gallery Section Below Slideshow -->
+<section class="py-5">
     <div class="container">
-        <h2 class="text-center mb-4">Gallery</h2>
-        <div class="row">
+        <div class="row g-4">
             {% for image in images %}
-            <!-- Image Thumbnail -->
-            <div class="col-lg-3 col-md-4 col-6 mb-4">
-                <a href="{{ image.image.url }}" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="{{ forloop.counter0 }}">
-                    <img src="{{ image.image.url }}" class="img-fluid" alt="{{ image.title }}" style="width: 100%; height: auto; object-fit: cover;">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <!-- Make images clickable and open in a modal -->
+                <a href="#imageModal{{ forloop.counter }}" data-bs-toggle="modal">
+                    <img src="{{ image.image.url }}" class="img-fluid img-thumbnail" alt="{{ image.title }}" style="border-radius: 15px;">
                 </a>
+                <!-- Modal for viewing image -->
+                <div class="modal fade" id="imageModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="imageModalLabel{{ forloop.counter }}" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="imageModalLabel{{ forloop.counter }}">{{ image.title }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ image.image.url }}" class="img-fluid" alt="{{ image.title }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             {% endfor %}
         </div>
     </div>
 </section>
-
-<!-- Modal for Fullscreen Image View -->
-<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Image View</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Carousel Placeholder for Modal -->
-                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        {% for image in images %}
-                        <div class="carousel-item{% if forloop.first %} active{% endif %}">
-                            <img src="{{ image.image.url }}" class="d-block w-100" alt="{{ image.title }}">
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Modal with Carousel
-    var galleryModal = document.getElementById('galleryModal');
-    galleryModal.addEventListener('show.bs.modal', function (event) {
-        var imageLink = event.relatedTarget;
-        var slideTo = imageLink.getAttribute('data-bs-slide-to');
-        var carousel = new bootstrap.Carousel(document.querySelector('#carouselExample'), {
-            interval: false,
-        });
-        carousel.to(slideTo); // Jump to the clicked image in the carousel
-    });
-});
-</script>
 {% endblock %}
