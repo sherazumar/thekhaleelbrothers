@@ -30,6 +30,7 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('charity/', include('charity.urls')),
     path('nasheeds/', include('nasheeds.urls')),
+    path('services/', include('services.urls')),
     # Add more mappings to include URLs from your apps
 ]
 

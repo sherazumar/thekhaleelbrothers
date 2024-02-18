@@ -2,12 +2,13 @@
 {% load static %}
 
 {% block content %}
-<div class="container py-5">
+<div class="container py-5" data-aos="fade-up" data-aos-duration="1000">
     <div class="row justify-content-center">
         <div class="col-md-8 text-center">
-            <h2>Thank you for your booking, {{ customer_name }}!</h2>
-            <p>Your booking on {{ booking_date }} at {{ booking_time }} has been successfully submitted. We will contact you shortly to confirm your booking details.</p>
-            <a href="{% url 'homepage' %}" class="btn btn-outline-success">Return Home</a>
+            <h2 class="mb-4" style="color: #28a745;">Thank You, {{ customer_name }}!</h2>
+            <i class="fas fa-check-circle" style="font-size: 4rem; color: #28a745;"></i>
+            <p class="my-4" style="font-size: 1.2rem;">Your booking on <strong>{{ booking_date }}</strong> at <strong>{{ booking_time }}</strong> has been successfully submitted. We will contact you shortly to confirm your booking details.</p>
+            <a href="{% url 'homepage' %}" class="btn btn-outline-success btn-lg" style="padding: 10px 30px; border-radius: 25px;">Return Home</a>
         </div>
     </div>
 </div>

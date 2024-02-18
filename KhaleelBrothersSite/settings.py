@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'contact',
     'charity',
     'nasheeds',
+    'services',
 ]
 
 MIDDLEWARE = [
