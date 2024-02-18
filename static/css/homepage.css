@@ -69,3 +69,32 @@ img.rounded.shadow:hover {
     line-height: 1.5;
     color: #555; /* Dark grey color for text */
 }
+
+
+/* Hero Section Enhancements */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static "images/hero-bg.jpg" %}') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
+
+.hero-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hero-section .btn {
+    background-color: #007bff; /* Example primary color */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    background-color: #0056b3;
+}

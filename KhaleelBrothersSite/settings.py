@@ -6,7 +6,6 @@ from django.contrib.messages import constants as messages
 
 
 env = environ.Env()
-# Reading .env file
 environ.Env.read_env()
 
 
