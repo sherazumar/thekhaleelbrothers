@@ -4,26 +4,37 @@
 
 {% block content %}
 <!-- Artists Bio Section -->
-<section class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default" style="padding: 50px 0; background-color: #f9f9f9;">
-    <div class="elementor-container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+<section
+        class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default"
+        style="padding: 50px 0; background-color: #f9f9f9;">
+    <div class="elementor-container"
+         style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
         <!-- Image Column -->
-        <div class="elementor-column elementor-col-50" style="flex: 1; max-width: 50%;" data-aos="fade-right" data-aos-duration="1000">
+        <div class="elementor-column elementor-col-50" style="flex: 1; max-width: 50%;" data-aos="fade-right"
+             data-aos-duration="1000">
             <div class="elementor-widget-wrap" style="text-align: center;">
-                <img src="{% static 'images/logo.png' %}" alt="The Khaleel Brothers" style="max-width: 100%; height: auto; border-radius: 10px;">
+                <img src="{% static 'images/logo.png' %}" alt="The Khaleel Brothers"
+                     style="max-width: 100%; height: auto; border-radius: 10px;">
             </div>
         </div>
         <!-- Biography Column -->
-        <div class="elementor-column elementor-col-50" style="flex: 1; max-width: 50%;" data-aos="fade-left" data-aos-duration="1000">
+        <div class="elementor-column elementor-col-50" style="flex: 1; max-width: 50%;" data-aos="fade-left"
+             data-aos-duration="1000">
             <div class="elementor-widget-wrap">
                 <h1 style="font-size: 2em; color: #333;">About the Khaleel Brothers</h1>
                 <p style="font-size: 1em; color: #666;">
-                    The Khaleel Brothers are accomplished Nasheed Artists whose Nasheeds transcend boundaries, uplifting hearts and souls around the world. Their melodious voices and soulful lyrics have earned them a dedicated following, making them prominent figures in the nasheed genre.
+                    The Khaleel Brothers are accomplished Nasheed Artists whose Nasheeds transcend boundaries, uplifting
+                    hearts and souls around the world. Their melodious voices and soulful lyrics have earned them a
+                    dedicated following, making them prominent figures in the nasheed genre.
                 </p>
                 <p style="font-size: 1em; color: #666;">
-                    Born with a passion for singing and a deep love for spirituality, the Khaleel Brothers discovered their calling early in life. Growing up in Chorley, they honed their vocal talents and developed a unique style that seamlessly blends traditional Islamic themes with contemporary sounds.
+                    Born with a passion for singing and a deep love for spirituality, the Khaleel Brothers discovered
+                    their calling early in life. Growing up in Chorley, they honed their vocal talents and developed a
+                    unique style that seamlessly blends traditional Islamic themes with contemporary sounds.
                 </p>
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <a class="btn btn-outline-warning btn-lg" href="{% url 'book_event' %}" style="white-space: nowrap;">
+                    <a class="btn btn-outline-warning btn-lg" href="{% url 'book_event' %}"
+                       style="white-space: nowrap;">
                         <i class="bi bi-calendar-plus"></i> Book Now
                     </a>
                 </div>
@@ -34,18 +45,26 @@
 
 
 <!-- Instagram Profiles Section - Hierarchical Design -->
-<section class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default" style="padding: 60px 0; background-color: #fff;">
-    <div class="elementor-container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 40px;">
+<section
+        class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default"
+        style="padding: 60px 0; background-color: #fff;">
+    <div class="elementor-container"
+         style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 40px;">
 
         <!-- Main Profile for Khaleel Brothers -->
-        <div class="main-profile" style="text-align: center; max-width: 60%;" data-aos="fade-up" data-aos-duration="1000">
+        <div class="main-profile" style="text-align: center; max-width: 60%;" data-aos="fade-up"
+             data-aos-duration="1000">
             <div style="padding: 20px; background: #f0f0f0; border-radius: 20px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);">
-                <img src="{% static 'images/khaleelbrothers_logo.png' %}" alt="Khaleel Brothers" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
+                <img src="{% static 'images/khaleelbrothers_logo.png' %}" alt="Khaleel Brothers"
+                     style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
                 <h2 style="font-size: 2em; color: #333; margin-bottom: 15px;">Khaleel Brothers</h2>
-                <p style="font-size: 1.2em; color: #666; margin-bottom: 25px;">The collective journey of nasheeds and spirituality on Instagram.</p>
-                <a href="https://www.instagram.com/khaleelbrothers/" class="btn" style="background-color: #007bff; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 5px;">
-                    <i class="fab fa-instagram" style="margin-right: 8px;"></i>Instagram
+                <p style="font-size: 1.2em; color: #666; margin-bottom: 25px;">The collective journey of nasheeds and
+                    spirituality on Instagram.</p>
+                <a href="https://www.instagram.com/khaleelbrothers/" class="btn"
+                   style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; justify-content: center;">
+                    <i class="fab fa-instagram" style="margin-right: 8px;"></i> Instagram
                 </a>
+
             </div>
         </div>
 
@@ -54,7 +73,8 @@
             <!-- Affan Khaleel -->
             <div style="flex: 1; text-align: center;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div style="padding: 20px; background: #fafafa; border-radius: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-                    <img src="{% static 'images/logo.png' %}" alt="Affaan Khaleel" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 20px;">
+                    <img src="{% static 'images/logo.png' %}" alt="Affaan Khaleel"
+                         style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 20px;">
                     <h3 style="font-size: 1.5em; color: #333; margin-bottom: 10px;">Affaan Khaleel</h3>
                     <p style="font-size: 1em; color: #666; margin-bottom: 20px;">Explore my personal journey.</p>
                     <!-- Instagram Icon -->
@@ -62,20 +82,24 @@
                         <i class="fab fa-instagram" style="font-size: 32px; color: #007bff;"></i></a>
                     <!-- Snapchat Icon -->
                     <a href="https://www.snapchat.com/add/affaan_k7">
-                        <i class="fab fa-snapchat-ghost" style="font-size: 32px; color: #FFD700; margin-left: 10px;"></i>
+                        <i class="fab fa-snapchat-ghost"
+                           style="font-size: 32px; color: #FFD700; margin-left: 10px;"></i>
                     </a>
                 </div>
             </div>
             <!-- Huzaifah Khaleel -->
             <div style="flex: 1; text-align: center;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                 <div style="padding: 20px; background: #fafafa; border-radius: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-                    <img src="{% static 'images/logo.png' %}" alt="Huzaifah Khaleel" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 20px;">
+                    <img src="{% static 'images/logo.png' %}" alt="Huzaifah Khaleel"
+                         style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 20px;">
                     <h3 style="font-size: 1.5em; color: #333; margin-bottom: 10px;">Huzaifah Khaleel</h3>
-                    <p style="font-size: 1em; color: #666; margin-bottom: 20px;">A personal blend of life and melodies on Instagram.</p>
+                    <p style="font-size: 1em; color: #666; margin-bottom: 20px;">A personal blend of life and
+                        melodies.</p>
                     <a href="https://www.instagram.com/Huzzi_k04/" class="me-3">
                         <i class="fab fa-instagram" style="font-size: 32px; color: #007bff;"></i></a>
                     <a href="https://www.snapchat.com/add/Huzzi_k04" class="social-icon">
-                        <i class="fab fa-snapchat-ghost" style="font-size: 32px; color: #FFD700; margin-left: 10px;"></i>
+                        <i class="fab fa-snapchat-ghost"
+                           style="font-size: 32px; color: #FFD700; margin-left: 10px;"></i>
                     </a>
                 </div>
             </div>

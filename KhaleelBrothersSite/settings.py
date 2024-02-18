@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'gallery',
     'contact',
     'charity',
+    'nasheeds',
 ]
 
 MIDDLEWARE = [

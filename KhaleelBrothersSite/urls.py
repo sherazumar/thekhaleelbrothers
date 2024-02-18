@@ -29,6 +29,7 @@ urlpatterns = [
     path('gallery/', include('gallery.urls')),
     path('contact/', include('contact.urls')),
     path('charity/', include('charity.urls')),
+    path('nasheeds/', include('nasheeds.urls')),
     # Add more mappings to include URLs from your apps
 ]
 
