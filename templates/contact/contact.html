@@ -8,7 +8,9 @@
         <div class="col-md-10 col-lg-8">
             <!-- Contact Heading -->
             <div class="text-center mb-4">
-                <h2 class="mb-3">Message Khaleel Brothers</h2>
+                <h2 class="card-title text-center mb-4"
+                    style="color: #FFD700; font-size: 2rem; font-weight: bold; letter-spacing: 2px; margin-bottom: 20px;">
+                    Message Khaleel Brothers</h2>
                 <p>Please complete the form, and one of our team members will be in touch soon!</p>
             </div>
 
@@ -18,23 +20,27 @@
                     {% csrf_token %}
                     <!-- Full Name Input -->
                     <div class="mb-3">
-                        <input type="text" name="full_name" class="form-control" placeholder="Full name" aria-label="Full name" required>
+                        <input type="text" name="full_name" class="form-control" placeholder="Full name"
+                               aria-label="Full name" required>
                     </div>
                     <!-- Email Input -->
                     <div class="mb-3">
-                        <input type="email" name="email" class="form-control" placeholder="Email" aria-label="Email" required>
+                        <input type="email" name="email" class="form-control" placeholder="Email" aria-label="Email"
+                               required>
                     </div>
                     <!-- Subject Input -->
                     <div class="mb-3">
-                        <input type="text" name="subject" class="form-control" placeholder="Subject" aria-label="Subject" required>
+                        <input type="text" name="subject" class="form-control" placeholder="Subject"
+                               aria-label="Subject" required>
                     </div>
                     <!-- Message Textarea -->
                     <div class="mb-3">
-                        <textarea name="message" class="form-control" placeholder="Message" rows="5" required></textarea>
+                        <textarea name="message" class="form-control" placeholder="Message" rows="5"
+                                  required></textarea>
                     </div>
                     <!-- Submit Button -->
                     <div class="text-center">
-                        <button type="submit" class="btn btn-outline-primary">Send Message</button>
+                        <button type="submit" class="btn btn-outline-warning">Send Message</button>
                     </div>
                 </form>
             </div>
@@ -63,30 +69,31 @@
 </div>
 
 {% if messages %}
-    <div class="modal fade" id="contactSuccessModal" tabindex="-1" aria-labelledby="contactSuccessModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="contactSuccessModalLabel">Success!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    {% for message in messages %}
-                        {{ message }}
-                    {% endfor %}
-                </div>
+<div class="modal fade" id="contactSuccessModal" tabindex="-1" aria-labelledby="contactSuccessModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactSuccessModalLabel">Success!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {% for message in messages %}
+                {{ message }}
+                {% endfor %}
             </div>
         </div>
     </div>
+</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
-                var contactSuccessModal = new bootstrap.Modal(document.getElementById('contactSuccessModal'));
-                contactSuccessModal.show();
-            }
-        });
-    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+            var contactSuccessModal = new bootstrap.Modal(document.getElementById('contactSuccessModal'));
+            contactSuccessModal.show();
+        }
+    });
+</script>
 {% endif %}
 
 

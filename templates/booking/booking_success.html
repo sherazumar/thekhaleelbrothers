@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h2>Thank you for your booking, {{ customer_name }}!</h2>
+            <p>Your booking on {{ booking_date }} at {{ booking_time }} has been successfully submitted. We will contact you shortly to confirm your booking details.</p>
+            <a href="{% url 'homepage' %}" class="btn btn-outline-success">Return Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -5,7 +5,12 @@
 
 <div class="container py-5" data-aos="fade-up" data-aos-duration="1000">
     <div class="row justify-content-center">
-        <!-- Bronze Plan Card -->
+        <h1 class="card-title text-center mb-4" style="color: #FFD700; font-size: 2.5rem; font-weight: bold; letter-spacing: 2px; margin-bottom: 20px;">
+            Want to book The Khaleel Brothers?
+        </h1>
+
+
+<!--        &lt;!&ndash; Bronze Plan Card &ndash;&gt;
         <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="card shadow h-100">
                 <div class="card-header" style="background-color: #cd7f32; color: white;">
@@ -43,7 +48,7 @@
             </div>
         </div>
 
-        <!-- Silver Plan Card -->
+        &lt;!&ndash; Silver Plan Card &ndash;&gt;
         <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="card shadow h-100">
                 <div class="card-header text-center" style="background-color: #C0C0C0; color: white;">
@@ -85,7 +90,7 @@
         </div>
 
 
-        <!-- Gold Plan Card -->
+        &lt;!&ndash; Gold Plan Card &ndash;&gt;
         <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="card shadow h-100">
                 <div class="card-header text-center" style="background-color: #D4AF37; color: white;">
@@ -128,7 +133,7 @@
                        data-plan="Gold">Select Plan</a>
                 </div>
             </div>
-        </div>
+        </div>-->
 
 
     </div>
@@ -143,6 +148,10 @@
                     <h2 class="card-title text-center mb-4 booking-form-title">Book Your Service Now</h2>
                     <form method="POST" action="{% url 'book_event' %}">
                         {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="occasion" class="form-label">Occasion</label>
+                            <input type="text" class="form-control" id="occasion" name="occasion" required>
+                        </div>
                         <div class="mb-3">
                             <label for="customerName" class="form-label">Full Name</label>
                             <input type="text" class="form-control" id="customerName" name="customer_name" required>
@@ -160,10 +169,6 @@
                             <input type="text" class="form-control" id="cityCountry" name="city_country" required>
                         </div>
                         <div class="mb-3">
-                            <label for="occasion" class="form-label">Occasion</label>
-                            <input type="text" class="form-control" id="occasion" name="occasion" required>
-                        </div>
-                        <div class="mb-3">
                             <label for="serviceDate" class="form-label">Date</label>
                             <input type="date" class="form-control" id="serviceDate" name="service_date" required>
                         </div>
@@ -171,7 +176,7 @@
                             <label for="serviceTime" class="form-label">Time</label>
                             <input type="time" class="form-control" id="serviceTime" name="service_time" required>
                         </div>
-                        <div class="mb-3">
+                        <!--<div class="mb-3">
                             <label for="serviceType" class="form-label">Service Type</label>
                             <select class="form-select" id="serviceType" name="service" required>
                                 <option selected disabled>Choose...</option>
@@ -180,23 +185,22 @@
                                 <option value="Gold">Gold Plan</option>
                                 <option value="Help">Help me choose</option>
                             </select>
-                        </div>
+                        </div>-->
 
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
                             <textarea class="form-control" id="message" name="message" rows="3"></textarea>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-outline-warning">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        </form>
     </div>
 
-    <script>
+<!--    <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.select-plan').forEach(function(button) {
                 button.addEventListener('click', function(e) {
@@ -220,7 +224,7 @@
                 });
             });
         });
-    </script>
+    </script>-->
 
 
     {% endblock %}
